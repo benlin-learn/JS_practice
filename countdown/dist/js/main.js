@@ -1,6 +1,7 @@
 const countdown = document.querySelector('#countdown');
 const launchDate = new Date('June 19, 2020 12:00:00').getTime();
-
+// June 19, 2020 12:00:00
+// June 8, 2020 22:49:00
 // console.log(launchDate);
 // console.log(now);
 // console.log(days, ':', hours, ':', minutes, ':', seconds);
@@ -24,6 +25,13 @@ const intvl = setInterval(() => {
       <li>${seconds}<span>秒</span></li>
     </ul>
   `;
-  countdown.innerHTML = output;
+  // Check if launch date passed
+  if (distance < 0) {
+    clearInterval(intvl);
+    countdown.innerHTML = '<div class="container launched">已到期!<div>';
+    document.querySelector('.logo .title').remove();
+  } else {
+    countdown.innerHTML = output;
+  }
   // console.log(days, ':', hours, ':', minutes, ':', seconds);
 }, 1000);
