@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #ccc;
+}
+.calculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 360px;
+  height: 100%;
+  margin: auto;
+  background-color: #ccc;
+}
+.output {
+  background-color: rgb(170, 235, 255);
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 15px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  .previousOperand {
+    color: #777;
+    font-size: 20px;
+  }
+  .currentOperand {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+.control-tab {
+  width: 360px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  button {
+    min-width: 90px;
+    height: 90px;
+    flex: 1;
+    border: 1px solid #fff;
+    padding: 30px 20px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.span-height {
+      // position: absolute;
+      height: 180px;
+    }
+    &:hover {
+      cursor: pointer;
+      background-color: #fff;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  .equal {
+    position: relative;
+
+    // display: block;
+    height: 180px;
+  }
+  .lastButton {
+    position: absolute;
+    display: flex;
+    top: 360px;
+    .span {
+      flex: 1 0 180px;
+      width: 180px;
+    }
+  }
+}

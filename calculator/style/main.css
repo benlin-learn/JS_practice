@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: #ccc;
+}
+
+.calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 360px;
+  height: 100%;
+  margin: auto;
+  background-color: #ccc;
+}
+
+.output {
+  background-color: #aaebff;
+  width: 100%;
+  min-height: 100px;
+  padding: 10px 15px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.output .previousOperand {
+  color: #777;
+  font-size: 20px;
+}
+
+.output .currentOperand {
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.control-tab {
+  width: 360px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: relative;
+}
+
+.control-tab button {
+  min-width: 90px;
+  height: 90px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 1px solid #fff;
+  padding: 30px 20px;
+  font-size: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.control-tab button.span-height {
+  height: 180px;
+}
+
+.control-tab button:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.control-tab button:focus {
+  outline: none;
+}
+
+.control-tab .equal {
+  position: relative;
+  height: 180px;
+}
+
+.control-tab .lastButton {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 360px;
+}
+
+.control-tab .lastButton .span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 180px;
+          flex: 1 0 180px;
+  width: 180px;
+}
+/*# sourceMappingURL=main.css.map */
