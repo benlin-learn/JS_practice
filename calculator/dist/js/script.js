@@ -28,7 +28,7 @@ class Calculator {
     //   'op',
     //   this.operation
     // );
-    console.log(this.previousOperand === '');
+    // console.log(this.previousOperand === '');
     // previous=''  current = operation = undefined
     if (
       this.previousOperand === '' &&
@@ -99,10 +99,38 @@ class Calculator {
     //   this.operation
     // );
   }
+  getDisplayNumber(number) {
+    const stringNumber = number.toString();
+    const integerDigits = parseFloat(stringNumber.split('.')[0]);
+    const decimalDigits = stringNumber.split('.')[1];
+    console.log(integerDigits, decimalDigits);
+    let integerDisplay;
+    // console.log(isNaN(integerDigits));
+    if (isNaN(integerDigits)) {
+      integerDisplay = '';
+    } else {
+      integerDisplay = integerDigits.toLocaleString('en', {
+        // 使用的小數位數的最大數目
+        maximumFractionDigits: 0,
+      });
+    }
+    // decimalDigits != null ---> has pressed the '.' button
+    if (decimalDigits != null) {
+      return `${integerDisplay}.${decimalDigits}`;
+    } else {
+      return integerDisplay;
+    }
+  }
+
   updateDisplay() {
-    this.currentOperandTextElement.innerText = this.currentOperand;
+    this.currentOperandTextElement.innerText = this.getDisplayNumber(
+      this.currentOperand
+    );
     if (this.operation != null) {
-      this.previousOperandTextElement.innerText = `${this.previousOperand} ${this.operation}`;
+      // append operation behind prev operand
+      this.previousOperandTextElement.innerText = `${this.getDisplayNumber(
+        this.previousOperand
+      )} ${this.operation}`;
     } else {
       this.previousOperandTextElement.innerText = '';
     }
