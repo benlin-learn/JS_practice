@@ -12,7 +12,7 @@ body {
 }
 .container {
   width: 600px;
-  margin: auto;
+  margin: 0 auto;
   padding-top: 80px;
   .wrap {
     display: flex;
@@ -24,8 +24,6 @@ body {
   }
   .pic {
     width: 30%;
-
-    padding-right: 10px;
 
     img {
       width: 100%;
@@ -58,9 +56,9 @@ body {
     font-family: 'Noto Sans TC', sans-serif;
     font-size: 16px;
     font-weight: 100;
-    color: #aaa;
+    color: #bbb;
     line-height: 1.6;
-    padding: 10px 0 10px 10px;
+    padding: 15px 0 10px 15px;
     margin-right: -10px;
   }
 }
@@ -86,9 +84,10 @@ body {
       margin: 10px;
       padding: 0 20px;
       background-color: rgba($color: #ccc, $alpha: 0.5);
-      box-shadow: 3px 3px 5px #999;
+
+      box-shadow: 0px 0px 10px #999;
       color: rgb(246, 230, 1);
-      font-size: 50px;
+      font-size: 45px;
       font-weight: 700;
       span {
         font-weight: 100;

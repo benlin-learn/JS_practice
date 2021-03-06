@@ -1,5 +1,5 @@
 const countdown = document.querySelector('#countdown');
-const launchDate = new Date('June 19, 2020 12:00:00').getTime();
+const launchDate = new Date('June 19, 2021 12:00:00').getTime();
 // June 19, 2020 12:00:00
 // June 8, 2020 22:49:00
 // console.log(launchDate);
